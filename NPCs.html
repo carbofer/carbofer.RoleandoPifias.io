@@ -4,6 +4,6 @@ permalink: /people/
 title: NPCs
 ---
 
-{% for post in site.categories.NPCs %}
- <li><span>{{ post.date | date_to_string }}</span> &nbsp; <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% for post in site.categories.people %}
+ <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}

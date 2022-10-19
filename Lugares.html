@@ -4,6 +4,7 @@ permalink: /places/
 title: Lugares
 ---
 
-{% for post in site.categories.Lugares %}
- <li>&nbsp; <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% assign sortedPosts = site.categories.places | sort: 'title' %}
+{% for post in sortedPosts %}
+ <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
